@@ -15,7 +15,7 @@ function UrlInput() {
             longUrl: url
         }
 
-        axios.post('http://localhost:5000/api/url/shorten', data)
+        axios.post('https://glacial-castle-30429.herokuapp.com/api/url/shorten', data)
         .then(res => {
             navigator.clipboard.writeText(res.data.shortUrl)
             window.alert('Link copied to clipboard')
