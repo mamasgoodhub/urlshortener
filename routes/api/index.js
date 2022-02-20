@@ -5,7 +5,7 @@ const Url = require('../../models/Url');
 
 //@route GET URLs
 //@desc Get all urls
-router.get('/', (req, res) => {
+router.get('/api/index', (req, res) => {
     Url.find()
     .then(urls => res.json(urls))
     .catch( err => res.status(404).json( { nourlsfound: 'No urls found'}));
