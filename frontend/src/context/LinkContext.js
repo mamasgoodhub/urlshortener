@@ -11,7 +11,7 @@ export const LinkProvider = ({children}) => {
     })
 
     const fetchLinks = async () => {
-        axios.get('http://localhost:5000/')
+        axios.get('https://glacial-castle-30429.herokuapp.com/')
         .then(res =>{
             setLink(res.data)
         })
