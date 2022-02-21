@@ -3,7 +3,7 @@ const connectDB = require('./config/db');
 const path = require('path');
 var cors = require('cors');
 
-const Url = require('/models/Url');
+const Url = require('../models/Url')
 
 const app = express();
 
