@@ -18,8 +18,10 @@ app.use('/', require('./routes/api/redirect'));
 app.use('/api/index', require('./routes/api/index'));
 app.use('/api/url', require('./routes/api/url'));
 
-const PORT = process.env.PORT || 80;
+//Define port
+const PORT = process.env.PORT || 3000;
 
+//Set static if in production
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, "frontend", "build")))
 

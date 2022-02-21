@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
+//Inputfield for url + button to call /api/url/short to get shortened url
 function UrlInput() {
     const [url, setUrl] = useState('')
 

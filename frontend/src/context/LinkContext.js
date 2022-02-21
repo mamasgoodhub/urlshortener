@@ -1,6 +1,8 @@
 import { createContext, useState, useEffect } from 'react'
 import axios from 'axios';
 
+
+//Context to manage links globally
 const LinkContext = createContext()
 
 export const LinkProvider = ({children}) => {
@@ -10,8 +12,9 @@ export const LinkProvider = ({children}) => {
         fetchLinks()
     }, /*[]*/)
 
+    //Fetch links for further use from /api/index
     const fetchLinks = async () => {
-        await axios.get('https://glacial-castle-30429.herokuapp.com/api/index')
+        axios.get('https://glacial-castle-30429.herokuapp.com/api/index')
         .then(res =>{
             setLink(res.data)
         })

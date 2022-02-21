@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import React, { Component } from 'react';
 import LinkContext from '../context/LinkContext';
 
+//Output all links in a table in a basic bootstrap design
 function LinksList() {
     const {link} = useContext(LinkContext)
 
