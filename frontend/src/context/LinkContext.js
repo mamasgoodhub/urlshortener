@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react'
 import axios from 'axios';
+import { axiosInstance } from '../config';
 
 const LinkContext = createContext()
 
@@ -11,7 +12,7 @@ export const LinkProvider = ({children}) => {
     })
 
     const fetchLinks = async () => {
-        axios.get('')
+        axiosInstance.get("/index")
         .then(res =>{
             setLink(res.data)
         })
