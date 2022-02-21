@@ -8,7 +8,7 @@ export const LinkProvider = ({children}) => {
 
     useEffect(() => {
         fetchLinks()
-    }, [])
+    }, [link])
 
     const fetchLinks = async () => {
         await axios.get('https://glacial-castle-30429.herokuapp.com/api/index')
