@@ -16,7 +16,7 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 //Define Routes
-app.use('/:code', async (req, res) => {
+app.get('/:code', async (req, res) => {
     try {
         const url = await Url.findOne({ urlCode: req.params.code });
 
