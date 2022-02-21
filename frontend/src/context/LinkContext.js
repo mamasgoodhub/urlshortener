@@ -16,7 +16,8 @@ export const LinkProvider = ({children}) => {
             setLink(res.data)
         })
         .catch(err =>{
-          console.log('Error fetching Links');
+            console.log(process.env.baseUrl);
+            console.log('Error fetching Links');
         })
       };
 
