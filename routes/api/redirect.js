@@ -21,3 +21,5 @@ router.get('/:code', async (req, res) => {
         res.status(500).json('Server error');
     }
 });
+
+module.exports = router;
