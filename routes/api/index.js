@@ -18,6 +18,8 @@ router.get('/:code', async (req, res) => {
         const url = await Url.findOne({ urlCode: req.params.code });
 
         if(url) {
+            console.log('Test');
+            console.log(url.longUrl)
             url.timesVisited++
             url.save()
             return res.redirect(url.longUrl);
