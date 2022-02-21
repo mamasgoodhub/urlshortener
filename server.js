@@ -17,7 +17,7 @@ app.use(express.json({ extended: false }));
 app.use('/api/index', require('./routes/api/index'));
 app.use('/api/url', require('./routes/api/url'));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 80;
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, "frontend", "build")))
