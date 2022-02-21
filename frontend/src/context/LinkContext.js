@@ -12,7 +12,7 @@ export const LinkProvider = ({children}) => {
     })
 
     const fetchLinks = async () => {
-        axiosInstance.get("/index")
+        axiosInstance.get("/api/index")
         .then(res =>{
             setLink(res.data)
         })
