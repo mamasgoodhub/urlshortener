@@ -10,15 +10,15 @@ import {LinkProvider} from './context/LinkContext'
 function App() {
   return (
     <>
-      <LinkProvider>
         <div className='d-flex flex-column align-items-center justify-content-center'>
           <h2 style={{textAlign: 'center', padding: '10px'}}>
             URL Shortener
           </h2>
           <UrlInput/>
-          <LinksList/>
+          <LinkProvider>
+            <LinksList/>
+          </LinkProvider>
         </div> 
-      </LinkProvider>
     </>
   );
 }
