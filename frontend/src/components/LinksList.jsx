@@ -17,13 +17,13 @@ function LinksList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {/*{link.map((link) => (
+                    {link.map((link) => (
                     <tr key={link._id}>
                         <td><a href={link.longUrl} target="_blank">{link.longUrl.length > 25 ? `${link.longUrl.substring(0, 25) + '...'}` : `${link.longUrl}`}</a></td>
                         <td><a href={link.shortUrl} target="_blank">{link.shortUrl}</a></td>
                         <td>{link.timesCreated}</td>
                         <td>{link.timesVisited}</td>
-                    </tr>))}*/}
+                    </tr>))}
                 </tbody>
             </table>
         </div>
