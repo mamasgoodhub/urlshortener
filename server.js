@@ -14,7 +14,7 @@ app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 //Define Routes
-app.use('/', require('./routes/api/index'));
+app.use('/api/index', require('./routes/api/index'));
 app.use('/api/url', require('./routes/api/url'));
 
 const PORT = process.env.PORT || 80;
