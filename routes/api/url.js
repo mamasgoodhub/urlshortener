@@ -31,7 +31,7 @@ router.post('/shorten', async (req, res) => {
                 url.save()
                 res.json(url);
             } else {
-                const shortUrl = baseUrl + '/' + urlCode;
+                const shortUrl = baseUrl + '/s/' + urlCode;
                 timesCreated = 1;
                 timesVisited = 0;
                 url = new Url({
